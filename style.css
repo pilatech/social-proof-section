@@ -32,7 +32,6 @@ body {
  text-align: center;
  margin-bottom: 4.5rem;
 }
-.hero__intro {}
 .title {
  font-size: 3.2rem;
  font-weight: 700;
@@ -49,17 +48,13 @@ body {
  font-weight: 500;
  margin-bottom: 2.5rem;
 }
-.hero__ratings {}
 .rating {
  background: var(--color-light-grayish-magenta);
  padding: 1.5rem;
  border-radius: .8rem;
  margin-bottom: 1.8rem;
 }
-.rating__stars {
-}
 .rating__star {
- width: 1.8rem;
  display: inline-block;
 }
 .rating__title {
@@ -69,7 +64,6 @@ body {
 }
 
 /* bottom section */
-.reviews {}
 .review {
  background: var(--color-very-dark-magent);
  margin-bottom: 1.8rem;
@@ -99,4 +93,95 @@ body {
 }
 .review__text {
  line-height: 1.6;
+}
+
+@media(min-width: 1200px){
+ body {
+  padding: 0;
+  background: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 50%, 100%;
+  background-position: top left, bottom right;
+ }
+ .container {
+  width: 90%;
+  max-width: 120rem;
+  padding: 10rem 2rem;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 3.5rem;
+ }
+ 
+ /* top section */
+ .hero {
+  grid-row: 1 / 2;
+  text-align: initial;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+ }
+ .hero__intro {
+  flex-basis: 35%;
+ }
+ .title {
+  font-size: 3.5rem;
+  width: 80%;
+  margin-inline: initial;
+  margin-bottom: 2.5rem;
+ }
+ .hero__text {
+  margin-bottom: 0;
+ }
+ .hero__ratings {
+  flex-basis: 60%;
+ }
+ .rating {
+  width: 70%;
+  padding-inline: 3.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ .rating:nth-child(2) {
+  margin-left: 15%;
+ }
+
+ .rating:nth-child(3) {
+  margin-left: 30%;
+ }
+ 
+ .rating__stars {
+  display: flex;
+  align-items: center;
+ }
+ .rating__star {
+  display: block;
+  width: 1.5rem;
+  margin-right: 1rem;
+ }
+ .rating__title {
+  margin-top: 0;
+ }
+ 
+ /* bottom section */
+ .reviews {
+  display: flex;
+  gap: 3.5rem;
+  align-items: flex-start;
+ }
+ .review {
+  margin-bottom: 0;
+  padding: 3rem;
+ }
+
+ .review:nth-of-type(2){
+  margin-top: 2rem;
+ }
+
+ .review:nth-of-type(3){
+  margin-top: 4rem;
+ }
+
 }
