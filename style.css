@@ -1,0 +1,24 @@
+* {}
+:root {}
+body {}
+.page {}
+
+/* top section */
+.hero {}
+.hero__intro {}
+.title {}
+.hero__text {}
+.hero__ratings {}
+.rating {}
+.rating__stars {}
+.rating__star {}
+.rating__title {}
+
+/* bottom section */
+.reviews {}
+.review {}
+.review__profile {}
+.review__avatar {}
+.review__title {}
+.review__title-extra {}
+.review__text {}
